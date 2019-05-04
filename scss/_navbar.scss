@@ -1,0 +1,38 @@
+#mainNav {
+  background-color: fade-out($secondary, 0.1);
+  @include body-font;
+  .navbar-brand {
+    color: $primary;
+  }
+  .navbar-nav {
+    .nav-item {
+      .nav-link {
+        color: fade-out($white, 0.3);
+        font-weight: 800;
+      }
+      &.active {
+        .nav-link {
+          color: $white;
+        }
+      }
+    }
+  }
+  @media (min-width: 992px) {
+    .navbar-nav {
+      .nav-item {
+        .nav-link {
+          font-size: 1.3rem;
+          &:hover {
+            color: fade-out($white, 0.6);
+            transform: translateY(-5px);
+          }
+        }
+        &.active {
+          .nav-link:hover {
+            color: $primary;
+          }
+        }
+      }
+    }
+  }
+}
